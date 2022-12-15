@@ -1,22 +1,27 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, ScrollView } from 'react-native';
 import Post from './Post';
 
 export default function Fits() {
   return (
-    <View style={styles.fits}>
-      {/* <Text style={styles.header}>Today's Fits</Text> */}
-      <Post/>
-
-    </View>
-    
+      <View style={styles.view}>
+        <ScrollView style={styles.scroll_view}>
+          <Post/>
+          <Post/>
+          <Post/>
+          <Post/>
+        </ScrollView>
+      </View>
   );
 }
 
 const styles = StyleSheet.create({
-  fits: {
-    flex: 1,
+  scroll_view: {
+    width: "100%"
+  },
+  view: {
     backgroundColor: '#fff',
+    flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
     alignSelf: 'stretch'

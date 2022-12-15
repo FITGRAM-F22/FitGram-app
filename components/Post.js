@@ -13,8 +13,10 @@ export default function Post() {
           uri: 'https://reactnative.dev/img/tiny_logo.png',
         }}
       />
-      <Text style={styles.tag}>Style</Text>
-       <Text style={styles.tag}>Activity</Text>
+      <View style={styles.tags}>
+        <Text style={styles.tag}>Style</Text>
+        <Text style={styles.tag}>Activity</Text>
+      </View>
     </View>
   );
 }
