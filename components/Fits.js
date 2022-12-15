@@ -5,9 +5,11 @@ import Post from './Post';
 export default function Fits() {
   return (
     <View style={styles.fits}>
-      <Text style={styles.header}>Today's Fits</Text>
+      {/* <Text style={styles.header}>Today's Fits</Text> */}
       <Post/>
+
     </View>
+    
   );
 }
 

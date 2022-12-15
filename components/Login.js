@@ -1,13 +1,17 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 export default function Login() {
+
+  const nav = useNavigation();
+
   return (
     <View style={styles.signup}>
         <Text style={styles.header}>FITGRAM</Text>
         <TextInput style={styles.textinput} placeholder="Email"></TextInput>
         <TextInput style={styles.textinput} placeholder="Password" secureTextEntry></TextInput>
-        <TouchableOpacity style={styles.button} onPress={() => nav.navigate('MyCloset')}>
+        <TouchableOpacity style={styles.button} onPress={() => nav.navigate('Tab')}>
             <Text style={styles.btntext}>Login</Text>
         </TouchableOpacity>    
     </View>

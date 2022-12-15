@@ -13,7 +13,7 @@ export default function Signup() {
         <TextInput style={styles.textinput} placeholder="Email"></TextInput>
         <TextInput style={styles.textinput} placeholder="Password" secureTextEntry></TextInput>
         <TextInput style={styles.textinput} placeholder="Confirm Password" secureTextEntry></TextInput>
-        <TouchableOpacity style={styles.button} onPress={() => nav.navigate('Fits')}>
+        <TouchableOpacity style={styles.button} onPress={() => nav.navigate('Login')}>
             <Text style={styles.btntext}>Sign Up</Text>
         </TouchableOpacity>
         {/* <Button title="Sign Up" onPress={() => nav.navigate('Catalog')} /> */}
