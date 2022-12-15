@@ -10,6 +10,7 @@ export default function Fits() {
           <Post/>
           <Post/>
           <Post/>
+          <Post/>
         </ScrollView>
     </View>
     
