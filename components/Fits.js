@@ -4,14 +4,15 @@ import Post from './Post';
 
 export default function Fits() {
   return (
-      <View style={styles.view}>
+    <View style={styles.view}>
         <ScrollView style={styles.scroll_view}>
           <Post/>
           <Post/>
           <Post/>
           <Post/>
         </ScrollView>
-      </View>
+    </View>
+    
   );
 }
 
@@ -22,6 +23,7 @@ const styles = StyleSheet.create({
   view: {
     backgroundColor: '#fff',
     flex: 1,
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
     alignSelf: 'stretch'
