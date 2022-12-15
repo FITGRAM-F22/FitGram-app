@@ -1,8 +1,9 @@
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons, SimpleLineIcons, MaterialIcons } from '@expo/vector-icons';
 import Fits from './Fits';
+import Event from './Events';
 
 function Ootd() {
   return (
@@ -13,18 +14,19 @@ function Ootd() {
   );
 }
 
-function Profile() {
+function Events() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Profile!</Text>
+      {/* <Text>Events!</Text> */}
+      <Event></Event>
     </View>
   );
 }
 
-function Notifications() {
+function Closet() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Notifications!</Text>
+      <Text>Closet!</Text>
     </View>
   );
 }
@@ -36,7 +38,7 @@ function MyTabs() {
     <Tab.Navigator
       initialRouteName="Ootd"
       screenOptions={{
-        tabBarActiveTintColor: '#e91e63',
+        tabBarActiveTintColor: '#000',
       }}
     >
       <Tab.Screen
@@ -45,27 +47,27 @@ function MyTabs() {
         options={{
           tabBarLabel: 'Ootd',
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="home" color={color} size={size} />
+            <MaterialCommunityIcons name="progress-clock" color={color} size={size} />
           ),
         }}
       />
       <Tab.Screen
-        name="Notifications"
-        component={Notifications}
+        name="Closet"
+        component={Closet}
         options={{
-          tabBarLabel: 'Updates',
+          tabBarLabel: 'Closet',
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="bell" color={color} size={size} />
+            <SimpleLineIcons name="bag" color={color} size={size} />
           ),
         }}
       />
       <Tab.Screen
-        name="Profile"
-        component={Profile}
+        name="Events"
+        component={Events}
         options={{
-          tabBarLabel: 'Profile',
+          tabBarLabel: 'Events',
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="account" color={color} size={size} />
+            <MaterialIcons name="event" color={color} size={size} />
           ),
         }}
       />
