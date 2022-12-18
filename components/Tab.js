@@ -70,7 +70,7 @@ function MyTabs() {
         }}
       />
       <Tab.Screen
-        name="Closet"
+        name="My Closet"
         component={ClosetComponent}
         options={{
           tabBarLabel: 'My Closet',

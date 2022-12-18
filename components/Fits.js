@@ -6,7 +6,7 @@ import MyPost from './MyPost';
 export default function Fits() {
   return (
     <View style={styles.view}>
-        <ScrollView style={styles.scroll_view}>
+        <ScrollView style={styles.scrollview}>
           <MyPost />
           <FriendPost/>
           <FriendPost/>
@@ -19,7 +19,7 @@ export default function Fits() {
 }
 
 const styles = StyleSheet.create({
-  scroll_view: {
+  scrollview: {
     width: "100%"
   },
   view: {
