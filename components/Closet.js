@@ -1,12 +1,17 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, ScrollView } from 'react-native';
 import { Ionicons, Feather, FontAwesome5, MaterialIcons} from '@expo/vector-icons'; 
+import GridImageView from 'react-native-grid-image-viewer';
+import { useNavigation } from '@react-navigation/native';
 
 export default function Closet() {
+  const nav = useNavigation();
+  const photos = ['https://reactnative.dev/img/tiny_logo.png', 'https://reactnative.dev/img/tiny_logo.png', 'https://reactnative.dev/img/tiny_logo.png', 'https://reactnative.dev/img/tiny_logo.png', 'https://reactnative.dev/img/tiny_logo.png', 'https://reactnative.dev/img/tiny_logo.png', 'https://reactnative.dev/img/tiny_logo.png', 'https://reactnative.dev/img/tiny_logo.png', 'https://reactnative.dev/img/tiny_logo.png', 'https://reactnative.dev/img/tiny_logo.png', 'https://reactnative.dev/img/tiny_logo.png', 'https://reactnative.dev/img/tiny_logo.png', 'https://reactnative.dev/img/tiny_logo.png', 'https://reactnative.dev/img/tiny_logo.png', 'https://reactnative.dev/img/tiny_logo.png', 'https://reactnative.dev/img/tiny_logo.png', 'https://reactnative.dev/img/tiny_logo.png', 'https://reactnative.dev/img/tiny_logo.png']
+
   return (
     <View style={styles.closet}>
-      <ScrollView style={styles.scrollview}>
-        <View style={styles.header}>
+      <ScrollView style={styles.scrollview} keyboardShouldPersistTaps={'handled'}>
+        <View style={styles.firstheader}>
           <TouchableOpacity style={[styles.usernamebutton, styles.shadow]} onPress={null}>
             <Ionicons name="person" size={20}/> 
             <Text style={styles.usernametext}>{'  '}Username</Text>
@@ -17,9 +22,11 @@ export default function Closet() {
             <Ionicons name="settings-sharp" size={32} color="black" />
           </View>
         </View>
-        <View style={styles.header}>
+        <View style={styles.secondheader}>
           <View style={styles.icons}>
-            <Feather name="camera" size={32} color="black" />            
+            <TouchableOpacity onPress={() => nav.navigate('Camera')}>
+              <Feather name="camera" size={32} color="black" />   
+            </TouchableOpacity>
             <Text>{'    '}</Text>
             <FontAwesome5 name="calendar-alt" size={32} color="black" />
           </View>
@@ -28,6 +35,7 @@ export default function Closet() {
             <Text style={styles.usernametext}>{'  '}22 DAY STREAK</Text>
           </TouchableOpacity>
         </View>
+        <GridImageView data={photos} />
       </ScrollView>
     </View>
   );
@@ -42,9 +50,16 @@ const styles = StyleSheet.create({
   scrollview: {
     width: "100%",
   },
-  header: {
+  firstheader: {
     flexDirection: 'row',
-    marginTop: 20,
+    marginTop: 18,
+    marginHorizontal: 40,
+    alignItems: 'center',
+    justifyContent: 'space-between'
+  },
+  secondheader: {
+    flexDirection: 'row',
+    marginVertical: 18,
     marginHorizontal: 40,
     alignItems: 'center',
     justifyContent: 'space-between'
@@ -87,5 +102,5 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start',
     backgroundColor: '#C0C0C0',
     alignItems: 'center',
-  }
+  }, 
 });
