@@ -19,11 +19,11 @@ export default function Post() {
         <View style={styles.tags}>
           <View style={[styles.shadowProp, styles.tag]}>
             <MaterialCommunityIcons name="briefcase-outline" size={14}/>
-            <Text>{' '}Style</Text>
+            <Text>{'  '}Style</Text>
           </View>
           <View style={[styles.shadowProp, styles.tag]}>
             <Ionicons name="md-globe-outline" size={14}/>
-            <Text>{' '}Activity</Text>
+            <Text>{'  '}Activity</Text>
           </View>
         </View>
       </View>
@@ -33,8 +33,6 @@ export default function Post() {
 
 const styles = StyleSheet.create({
   post: {
-    borderColor: '#000',
-    borderWidth: 1,
     flex: 1,
     paddingTop: 16,
     paddingBottom: 16,

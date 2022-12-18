@@ -1,16 +1,18 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, ScrollView } from 'react-native';
-import Post from './Post';
+import FriendPost from './FriendPost';
+import MyPost from './MyPost';
 
 export default function Fits() {
   return (
     <View style={styles.view}>
         <ScrollView style={styles.scroll_view}>
-          <Post/>
-          <Post/>
-          <Post/>
-          <Post/>
-          <Post/>
+          <MyPost />
+          <FriendPost/>
+          <FriendPost/>
+          <FriendPost/>
+          <FriendPost/>
+          <FriendPost/>
         </ScrollView>
     </View>
     
