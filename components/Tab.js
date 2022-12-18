@@ -63,7 +63,7 @@ function MyTabs() {
             </TouchableOpacity>
           ),
           headerRight: () => (
-            <TouchableOpacity onPress={() => alert('This is a button!')}>
+            <TouchableOpacity onPress={() => nav.navigate('Friends')}>
               <MaterialIcons name="group" size={28} color="black" style={{marginRight: 24}}/>
             </TouchableOpacity>
           ),
