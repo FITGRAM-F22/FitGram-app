@@ -38,6 +38,12 @@ function MyTabs() {
       initialRouteName="Today's Fits"
       screenOptions={{
         tabBarActiveTintColor: '#000',
+        tabBarIconStyle: {
+          marginTop: 4,
+        },
+        tabBarLabelStyle: {
+          marginBottom: 4,
+        },
       }}
     >
       <Tab.Screen
@@ -54,7 +60,7 @@ function MyTabs() {
         name="Closet"
         component={ClosetComponent}
         options={{
-          tabBarLabel: 'Closet',
+          tabBarLabel: 'My Closet',
           tabBarIcon: ({ color, size }) => (
             <SimpleLineIcons name="bag" color={color} size={size} />
           ),
