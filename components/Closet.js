@@ -1,16 +1,16 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 
-export default function MyCloset() {
+export default function Closet() {
   return (
-    <View style={styles.mycloset}>
+    <View style={styles.closet}>
       <Text style={styles.header}>CLOSET</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  mycloset: {
+  closet: {
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',

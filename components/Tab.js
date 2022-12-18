@@ -3,30 +3,29 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialCommunityIcons, SimpleLineIcons, MaterialIcons } from '@expo/vector-icons';
 import Fits from './Fits';
-import Event from './Events';
+import Closet from './Closet';
+import Events from './Events';
 
-function Ootd() {
+function TodaysFitsComponent() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      {/* <Text>Feed!</Text> */}
       <Fits></Fits>
     </View>
   );
 }
 
-function Events() {
+function ClosetComponent() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      {/* <Text>Events!</Text> */}
-      <Event></Event>
+      <Closet></Closet>
     </View>
   );
 }
 
-function Closet() {
+function EventsComponent() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Closet!</Text>
+      <Events></Events>
     </View>
   );
 }
@@ -36,16 +35,16 @@ const Tab = createBottomTabNavigator();
 function MyTabs() {
   return (
     <Tab.Navigator
-      initialRouteName="Ootd"
+      initialRouteName="Today's Fits"
       screenOptions={{
         tabBarActiveTintColor: '#000',
       }}
     >
       <Tab.Screen
-        name="Ootd"
-        component={Ootd}
+        name="Today's Fits"
+        component={TodaysFitsComponent}
         options={{
-          tabBarLabel: 'Ootd',
+          tabBarLabel: 'Today\'s Fits',
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="progress-clock" color={color} size={size} />
           ),
@@ -53,7 +52,7 @@ function MyTabs() {
       />
       <Tab.Screen
         name="Closet"
-        component={Closet}
+        component={ClosetComponent}
         options={{
           tabBarLabel: 'Closet',
           tabBarIcon: ({ color, size }) => (
@@ -63,7 +62,7 @@ function MyTabs() {
       />
       <Tab.Screen
         name="Events"
-        component={Events}
+        component={EventsComponent}
         options={{
           tabBarLabel: 'Events',
           tabBarIcon: ({ color, size }) => (
