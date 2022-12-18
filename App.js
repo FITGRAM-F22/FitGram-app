@@ -6,8 +6,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 // You can import from local files
 import Signup from './components/Signup';
 import Login from './components/Login';
-import Closet from './components/Closet';
-import Fits from './components/Fits';
 import Tab from './components/Tab';
 
 // or any pure javascript modules available in npm
@@ -21,7 +19,6 @@ export default function App() {
         <Stack.Screen name="Login" component={Login}></Stack.Screen>
         <Stack.Screen name="Tab" component={Tab} options={{ headerShown: false }}></Stack.Screen>
       </Stack.Navigator>
-      
     </NavigationContainer>
   );
 }

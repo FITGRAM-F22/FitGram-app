@@ -1,7 +1,7 @@
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableHighlight, Button, Icon} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { MaterialCommunityIcons, SimpleLineIcons, MaterialIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons, SimpleLineIcons, MaterialIcons, FontAwesomeIcon } from '@expo/vector-icons';
 import Fits from './Fits';
 import Closet from './Closet';
 import Events from './Events';
@@ -53,6 +53,18 @@ function MyTabs() {
           tabBarLabel: 'Today\'s Fits',
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="progress-clock" color={color} size={size} />
+          ),
+          headerLeft: () => (
+            <Button
+              onPress={() => alert('This is a button!')}
+              title="Camera"
+            />
+          ),
+          headerRight: () => (
+            <Button
+              onPress={() => alert('This is a button!')}
+              title="Friends"
+            />
           ),
         }}
       />
