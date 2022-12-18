@@ -1,10 +1,11 @@
-import { StyleSheet, Text, View, TextInput, TouchableHighlight, Button, Icon} from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableHighlight, Button, TouchableOpacity} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { MaterialCommunityIcons, SimpleLineIcons, MaterialIcons, FontAwesomeIcon } from '@expo/vector-icons';
+import { MaterialCommunityIcons, SimpleLineIcons, MaterialIcons, Feather } from '@expo/vector-icons';
 import Fits from './Fits';
 import Closet from './Closet';
 import Events from './Events';
+import { useNavigation } from '@react-navigation/native';
 
 function TodaysFitsComponent() {
   return (
@@ -33,6 +34,8 @@ function EventsComponent() {
 const Tab = createBottomTabNavigator();
 
 function MyTabs() {
+  const nav = useNavigation();
+
   return (
     <Tab.Navigator
       initialRouteName="Today's Fits"
@@ -55,16 +58,14 @@ function MyTabs() {
             <MaterialCommunityIcons name="progress-clock" color={color} size={size} />
           ),
           headerLeft: () => (
-            <Button
-              onPress={() => alert('This is a button!')}
-              title="Camera"
-            />
+            <TouchableOpacity onPress={() => nav.navigate('Camera')}>
+              <Feather name="camera" size={28} color="black" style={{marginLeft: 24}}/>
+            </TouchableOpacity>
           ),
           headerRight: () => (
-            <Button
-              onPress={() => alert('This is a button!')}
-              title="Friends"
-            />
+            <TouchableOpacity onPress={() => alert('This is a button!')}>
+              <MaterialIcons name="group" size={28} color="black" style={{marginRight: 24}}/>
+            </TouchableOpacity>
           ),
         }}
       />

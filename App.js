@@ -7,6 +7,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Signup from './components/Signup';
 import Login from './components/Login';
 import Tab from './components/Tab';
+import Camera from './components/Camera';
 
 // or any pure javascript modules available in npm
 const Stack = createStackNavigator();
@@ -18,6 +19,7 @@ export default function App() {
         <Stack.Screen name="Signup" component={Signup}></Stack.Screen>
         <Stack.Screen name="Login" component={Login}></Stack.Screen>
         <Stack.Screen name="Tab" component={Tab} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="Camera" component={Camera}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
   );
