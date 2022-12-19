@@ -10,7 +10,7 @@ export default function FriendPost() {
       <TouchableOpacity style={[styles.usernamebutton, styles.shadow]} onPress={null}>
           <Ionicons name="person" size={20}/> 
           <Text style={styles.usernametext}>{'  '}Username</Text>
-        </TouchableOpacity> 
+      </TouchableOpacity> 
       <View style={styles.centered}>
         <Image
           style={styles.image}
