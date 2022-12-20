@@ -26,8 +26,8 @@ export default function Events() {
           <ScrollView horizontal>
             <View style={[styles.card1, styles.shadowProp]}>
               <View>
-                <Text style={styles.heading}>
-                  React Native Box Shadow (Shadow Props)
+                <Text style={styles.title}>
+                  Spring sem...
                 </Text>
               </View>
               <Image
@@ -37,8 +37,8 @@ export default function Events() {
             </View>
             <View style={[styles.card1, styles.shadowProp]}>
               <View>
-                <Text style={styles.heading}>
-                  React Native Box Shadow (Shadow Props)
+                <Text style={styles.title}>
+                  Office happy hour
                 </Text>
               </View>
               <Image
@@ -48,8 +48,8 @@ export default function Events() {
             </View>
             <View style={[styles.card1, styles.shadowProp]}>
               <View>
-                <Text style={styles.heading}>
-                  React Native Box Shadow (Shadow Props)
+                <Text style={styles.title}>
+                  Brunch picnic
                 </Text>
               </View>
               <Image
@@ -59,8 +59,8 @@ export default function Events() {
             </View>
             <View style={[styles.card1, styles.shadowProp]}>
               <View>
-                <Text style={styles.heading}>
-                  React Native Box Shadow (Shadow Props)
+                <Text style={styles.title}>
+                  Kwanzaa Ball
                 </Text>
               </View>
               <Image
@@ -76,28 +76,64 @@ export default function Events() {
         <View>
           <Text>{'    '}</Text>
           <Text style={styles.textheader}>Friends' Events</Text>
+          <ScrollView>
             <View style={[styles.card2, styles.shadowProp]}>
-              <View>
-                <TouchableOpacity style={[styles.usernamebutton, styles.shadow]} onPress={null}>
+              <View style={styles.friendscontent}>
+                <View>
+                  <TouchableOpacity style={[styles.usernamebutton, styles.shadow]} onPress={null}>
                     <Ionicons name="person" size={20}/> 
                     <Text style={styles.usernametext}>{'  '}Username</Text>
-                </TouchableOpacity>
+                  </TouchableOpacity>
+                  <Text style={styles.title}>
+                    Halloween party
+                  </Text>
+                  <Text style={styles.caption}>
+                    racecar driver or queen...
+                  </Text>
+                </View>
+                <View>
+                  <Image
+                  source={image}
+                  style={styles.friendsimage}
+                  />
+                </View>
+                <View>
+                  <Image
+                  source={image}
+                  style={styles.friendsimage}
+                  />
+                </View>
               </View>
-              <Text>
-                Using the elevation style prop to apply box-shadow for iOS devices
-              </Text>
             </View>
             <View style={[styles.card2, styles.shadowProp]}>
-              <View>
-                <TouchableOpacity style={[styles.usernamebutton, styles.shadow]} onPress={null}>
-                  <Ionicons name="person" size={20}/> 
-                  <Text style={styles.usernametext}>{'  '}Username</Text>
-                </TouchableOpacity>
+              <View style={styles.friendscontent}>
+                <View>
+                  <TouchableOpacity style={[styles.usernamebutton, styles.shadow]} onPress={null}>
+                    <Ionicons name="person" size={20}/> 
+                    <Text style={styles.usernametext}>{'  '}Username</Text>
+                  </TouchableOpacity>
+                  <Text style={styles.title}>
+                    Homecominggg
+                  </Text>
+                  <Text style={styles.caption}>
+                    Which shirt should I w...
+                  </Text>
+                </View>
+                <View>
+                  <Image
+                  source={image}
+                  style={styles.friendsimage}
+                  />
+                </View>
+                <View>
+                  <Image
+                  source={image}
+                  style={styles.friendsimage}
+                  />
+                </View>
               </View>
-              <Text>
-                Homecomingggggg
-              </Text>
             </View>
+          </ScrollView>
         </View>
       </View>
 
@@ -111,6 +147,14 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignSelf: 'stretch',
+  },
+  title: {
+    fontSize: 18,
+    fontStyle: 'italic',
+    padding: 10
+  },
+  caption: {
+    paddingLeft: 10,
   },
   firstheader: {
     flexDirection: 'row',
@@ -204,7 +248,16 @@ const styles = StyleSheet.create({
   image: {
     width: 100,
     height: 100,
-    marginTop: 15,
+    marginTop: 1,
     marginLeft: 25
+  },
+  friendscontent: {
+    flexDirection: 'row',
+  },
+  friendsimage: {
+    width: 50,
+    height: 50,
+    padding: 40,
+    margin: 10,
   }
 })
