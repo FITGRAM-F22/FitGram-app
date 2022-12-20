@@ -28,9 +28,11 @@ export default function Closet() {
               <Feather name="camera" size={32} color="black" />   
             </TouchableOpacity>
             <Text>{'    '}</Text>
-            <FontAwesome5 name="calendar-alt" size={32} color="black" />
+            <TouchableOpacity onPress={() => nav.navigate('CreateEvent')}>
+              <FontAwesome5 name="calendar-alt" size={32} color="black" />
+            </TouchableOpacity>
           </View>
-          <TouchableOpacity style={[styles.streak, styles.shadow]} onPress={null}>
+          <TouchableOpacity style={[styles.streak, styles.shadow]} onPress={(null)}>
             <MaterialIcons name="hourglass-bottom" size={20} color="black" />
             <Text style={styles.usernametext}>{'  '}22 DAY STREAK</Text>
           </TouchableOpacity>
