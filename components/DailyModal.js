@@ -3,12 +3,12 @@ import Modal from "react-native-modal";
 import { Entypo } from '@expo/vector-icons'; 
 import { useNavigation } from '@react-navigation/native';
 
-export default function DailyModal({ isModalVisible, setModalNotVisible }) {
+export default function DailyModal({ isModalVisible, setModalVisible }) {
     const nav = useNavigation();
 
     const navigateToCamera = () => {
+        setModalVisible(false);
         nav.navigate('Camera');
-        setModalNotVisible;
     };
   
     return (
@@ -16,7 +16,7 @@ export default function DailyModal({ isModalVisible, setModalNotVisible }) {
             <Modal isVisible={isModalVisible}>
                 <View style={styles.modal}>
                 <View style={styles.modalclosebutton}>
-                    <TouchableOpacity onPress={setModalNotVisible}>
+                    <TouchableOpacity onPress={() => {setModalVisible(false)}}>
                         <Entypo name="cross" size={30} color="black" />
                     </TouchableOpacity>
                 </View>
