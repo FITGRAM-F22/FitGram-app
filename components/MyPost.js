@@ -7,14 +7,7 @@ export default function MyPost() {
 
     return (
         <View style={styles.post}> 
-            <View>
-                <Image
-                style={styles.image}
-                source={{
-                    uri: 'https://reactnative.dev/img/tiny_logo.png',
-                }}
-                />
-            </View>
+            <Image style={styles.image} source={{uri: 'https://reactnative.dev/img/tiny_logo.png',}}/>
             <View style={styles.tags}>
                 <TouchableOpacity onPress={() => setShowDescription(!showDescription)}>
                     <View style={[styles.shadow, styles.tag]}>
@@ -39,7 +32,7 @@ const styles = StyleSheet.create({
     post: {
         flex: 1,
         paddingTop: 24,
-        paddingBottom: 16,
+        paddingBottom: 30,
         justifyContent: 'center',
         flexDirection: 'row',
         alignItems: 'stretch',

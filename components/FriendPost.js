@@ -7,32 +7,27 @@ export default function FriendPost() {
 
   return (
     <View style={styles.post}>
-      <TouchableOpacity style={[styles.usernamebutton, styles.shadow]} onPress={null}>
+      <View style={styles.centered}>
+        <Image style={styles.image} source={{uri: 'https://reactnative.dev/img/tiny_logo.png'}}/>
+        <TouchableOpacity style={[styles.usernamebutton, styles.shadow]} onPress={null}>
           <Ionicons name="person" size={20}/> 
           <Text style={styles.usernametext}>{'  '}Username</Text>
-      </TouchableOpacity> 
-      <View style={styles.centered}>
-        <Image
-          style={styles.image}
-          source={{
-            uri: 'https://reactnative.dev/img/tiny_logo.png',
-          }}
-        />
-        <TouchableOpacity onPress={() => setShowDescription(!showDescription)}>
-          <View style={styles.tags}>
-            <View style={[styles.shadow, styles.tag]}>
-              <MaterialCommunityIcons name="briefcase-outline" size={14}/>
-              <Text>{'  '}Style</Text>
+        </TouchableOpacity> 
+        <TouchableOpacity style={styles.alltags} onPress={() => setShowDescription(!showDescription)}>
+            <View style={styles.maintags}>
+              <View style={[styles.shadow, styles.tag]}>
+                <MaterialCommunityIcons name="briefcase-outline" size={14}/>
+                <Text>{'  '}Style</Text>
+              </View>
+              <View style={[styles.shadow, styles.tag]}>
+                <Ionicons name="md-globe-outline" size={14}/>
+                <Text>{'  '}Activity</Text>
+              </View>
             </View>
-            <View style={[styles.shadow, styles.tag]}>
-              <Ionicons name="md-globe-outline" size={14}/>
-              <Text>{'  '}Activity</Text>
-            </View>
-          </View>
-          {showDescription && <View style={[styles.shadow, styles.commenttag]}>
-              <Foundation name="page" size={14} color="black" />
-              <Text>{'  '}Description</Text>
-          </View>}
+            {showDescription && <View style={[styles.shadow, styles.commenttag]}>
+                <Foundation name="page" size={14} color="black" />
+                <Text>{'  '}Description</Text>
+            </View>}
         </TouchableOpacity>
       </View>
     </View>
@@ -64,7 +59,8 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start',
     marginLeft: 24,
     backgroundColor: '#fff',
-    alignItems: 'center'
+    alignItems: 'center',
+    marginTop: -270,
   },
   centered: {
     alignItems: 'center',
@@ -78,7 +74,11 @@ const styles = StyleSheet.create({
     width: 250,
     height: 250,
   },
-  tags: {
+  alltags: {
+    marginTop: 200,
+    marginBottom: 30,
+  },
+  maintags: {
     flexDirection: 'row',
     backgroundColor: '#fff',
   },
