@@ -16,12 +16,14 @@ export default function CreateEvent() {
     
     return (
         <View style={styles.searchSection}>
-            {/* <Icon style={styles.searchIcon} name="rocket" size={20} color="#000"/> */}
+            
             <TextInput
                 style={styles.input}
                 placeholder="Add a title"
                 onChangeText={(searchString) => {this.setState({searchString})}}
-            />
+            >
+                {/* <Icon style={styles.searchIcon} name="rocket" size={20} color="#000"/> */}
+            </TextInput>
             {errors.title && <Text>This is required.</Text>}
 
             <TextInput
