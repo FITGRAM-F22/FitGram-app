@@ -58,7 +58,7 @@ function MyTabs() {
             <MaterialCommunityIcons name="progress-clock" color={color} size={size} />
           ),
           headerLeft: () => (
-            <TouchableOpacity onPress={() => nav.navigate('Camera')}>
+            <TouchableOpacity onPress={() => nav.navigate('CreatePost')}>
               <Feather name="camera" size={28} color="black" style={{marginLeft: 24}}/>
             </TouchableOpacity>
           ),

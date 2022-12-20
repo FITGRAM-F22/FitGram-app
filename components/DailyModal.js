@@ -8,7 +8,7 @@ export default function DailyModal({ isModalVisible, setModalVisible }) {
 
     const navigateToCamera = () => {
         setModalVisible(false);
-        nav.navigate('Camera');
+        nav.navigate('CreatePost');
     };
   
     return (

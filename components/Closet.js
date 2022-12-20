@@ -32,7 +32,7 @@ export default function Closet() {
         </View>
         <View style={styles.secondheader}>
           <View style={styles.icons}>
-            <TouchableOpacity onPress={() => nav.navigate('Camera')}>
+            <TouchableOpacity onPress={() => nav.navigate('CreatePost')}>
               <Feather name="camera" size={32} color="black" />   
             </TouchableOpacity>
             <Text>{'    '}</Text>
