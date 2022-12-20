@@ -3,10 +3,6 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image, Button, Tou
 import { Ionicons, MaterialCommunityIcons, Foundation} from '@expo/vector-icons'; 
 
 export default function MyPost() {
-    // const setDescription = () => {
-    //     this.setState({showDescription: false})
-    // }
-
     const [showDescription, setShowDescription] = useState(false);
 
     return (
