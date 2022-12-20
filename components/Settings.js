@@ -11,7 +11,6 @@ export default function Settings({setShowSettings}) {
   const [isInstaChecked, setInstaChecked] = useState(false);
   const [isPinChecked, setPinChecked] = useState(false);
   const [isFriendsChecked, setFriendsChecked] = useState(false);
-  const [isMyselfChecked, setMyselfChecked] = useState(false);
 
   return (
     <View style={styles.settings}> 
@@ -34,7 +33,7 @@ export default function Settings({setShowSettings}) {
         </View>
         <Text style={styles.subheader}>Connected Accounts</Text>
         <View style={styles.row}>
-            <Checkbox style={styles.checkbox} value={isFBChecked} onValueChange={setFBChecked} />
+            <Checkbox style={styles.squarecheckbox} value={isFBChecked} onValueChange={setFBChecked} />
             <Text style={styles.regtext}>{'  '}Facebook</Text>
         </View>
         <View style={styles.row}>

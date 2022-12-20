@@ -21,7 +21,9 @@ export default function Closet() {
             <Text style={styles.usernametext}>{'  '}Username</Text>
           </TouchableOpacity>
           <View style={styles.icons}>
-            <Ionicons name="filter" size={32} color="black" /> 
+            <TouchableOpacity onPress={() => nav.navigate('Filters')}>
+              <Ionicons name="filter" size={32} color="black" /> 
+            </TouchableOpacity>
             <Text>{'   '}</Text>
             <TouchableOpacity onPress={() => setShowSettings(!showSettings)}>
               <Ionicons name="settings-sharp" size={32} color="black" />
