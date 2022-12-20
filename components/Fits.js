@@ -7,14 +7,10 @@ import DailyModal from './DailyModal';
 export default function Fits() {
   const [isModalVisible, setModalVisible] = useState(true);
 
-  const setModalNotVisible = () => {
-    setModalVisible(false);
-  };
-
   return (
     <View style={styles.view}>
         <ScrollView style={styles.scrollview}>
-          <DailyModal setModalNotVisible={setModalNotVisible} isModalVisible={isModalVisible}/>
+          <DailyModal setModalVisible={setModalVisible} isModalVisible={isModalVisible}/>
           <MyPost />
           <FriendPost/>
           <FriendPost/>
