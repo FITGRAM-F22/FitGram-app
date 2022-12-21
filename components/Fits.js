@@ -7,13 +7,13 @@ import DailyModal from './DailyModal';
 export default function Fits() {
   const [isModalVisible, setModalVisible] = useState(true);
 
-  const myInfo = [require("../assets/fashion/myPhoto.png"), "athleisure", "movie night", "watched some movies with friends, just wanted some comfy jeans"]
+  const myInfo = [require("../assets/fashion/myPhoto.png"), "athleisure", "movie night", "watched some movies with friends and just wanted some comfy jeans"]
 
   const friendInfo = [
     [require("../assets/fashion/friendPhoto1.png"), "KENZIEJOHNSON65", "business casual", "daytime activity", "wore this to a museum with my family, sweater is Sandro, jeans were thrifted Levi's"],
     [require("../assets/fashion/friendPhoto2.png"), "ALEXAGOMEZZZZ", "streetwear", "brunch", "went to the diner with friends, wanted to wear this shirt from vacation"],
-    [require("../assets/fashion/friendPhoto3.png"), "JESSTAYLOR24", "semiformal", "concert or show", "got to see a broadway show earlier today, wore this new dress from Zara's"],
-    [require("../assets/fashion/friendPhoto4.png"), "MAY193", "trendy", "date", "outfit from my date earlier today, just getting coffee so wanted to keep it simple"],
+    [require("../assets/fashion/friendPhoto3.png"), "JESSTAYLOR24", "semiformal", "concert or show", "got to see a broadway show earlier today! wore this new dress from Zara's"],
+    [require("../assets/fashion/friendPhoto4.png"), "MAY193", "trendy", "date", "outfit from my date earlier today... just getting coffee so wanted to keep it simple"],
     [require("../assets/fashion/friendPhoto5.png"), "FRANFRAN", "officewear", "work", "had to go into the office today so wore this nice button up I forgot I had"]
   ]
 

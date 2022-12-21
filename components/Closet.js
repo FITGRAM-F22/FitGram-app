@@ -55,7 +55,7 @@ export default function Closet() {
         </View>
         <TouchableOpacity style={[styles.streak, styles.shadow]} onPress={null}>
           <MaterialIcons name="hourglass-bottom" size={20} color="black" />
-          <Text style={styles.usernametext}>{'  '}22 DAY STREAK</Text>
+          <Text style={styles.usernametext}>{'  '}12 DAY STREAK</Text>
         </TouchableOpacity>
       </View>
       <GridImageView data={photos} />

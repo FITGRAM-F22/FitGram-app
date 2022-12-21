@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Image, TextInput, Dimensions } from 'react-nati
 import { Feather } from '@expo/vector-icons'
 
 export default function CreatePost() {
-    const placeholderDescription = "movie night with friends, just wanted some comfy jeans"
+    const placeholderDescription = "watched some movies with friends and just wanted some comfy jeans"
 
     return (
         <View style={styles.createpostwithdescription}>
