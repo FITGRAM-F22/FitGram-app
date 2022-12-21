@@ -17,123 +17,126 @@ export default function Events() {
           <Text>{'   '}</Text>
         </View>
       </View>
-      <View style={styles.secondheader}>
-        <View>
-          <Text>{'    '}</Text>
-          <Text style={styles.textheader}>My Events</Text>
-          <ScrollView horizontal>
-            <View style={[styles.card1, styles.shadowProp]}>
-              <View>
-                <Text style={styles.title}>
-                  Spring sem...
-                </Text>
+      <ScrollView>
+        <View style={styles.secondheader}>
+          <View>
+            <Text>{'    '}</Text>
+            <Text style={styles.textheader}>My Events</Text>
+            <ScrollView horizontal>
+              <View style={[styles.card1, styles.shadowProp]}>
+                <View>
+                  <Text style={styles.title}>
+                    Spring sem...
+                  </Text>
+                </View>
+                <Image
+                  source={require("../assets/fashion/eventPhoto1.png")}
+                  style={styles.image}
+                />
               </View>
-              <Image
-                source={require("../assets/fashion/eventPhoto1.png")}
-                style={styles.image}
-              />
-            </View>
-            <View style={[styles.card1, styles.shadowProp]}>
-              <View>
-                <Text style={styles.title}>
-                  Office happy hour
-                </Text>
+              <View style={[styles.card1, styles.shadowProp]}>
+                <View>
+                  <Text style={styles.title}>
+                    Office happy hour
+                  </Text>
+                </View>
+                <Image
+                  source={require("../assets/fashion/eventPhoto2.png")}
+                  style={styles.image}
+                />
               </View>
-              <Image
-                source={require("../assets/fashion/eventPhoto2.png")}
-                style={styles.image}
-              />
-            </View>
-            <View style={[styles.card1, styles.shadowProp]}>
-              <View>
-                <Text style={styles.title}>
-                  Brunch picnic
-                </Text>
+              <View style={[styles.card1, styles.shadowProp]}>
+                <View>
+                  <Text style={styles.title}>
+                    Brunch picnic
+                  </Text>
+                </View>
+                <Image
+                  source={require("../assets/fashion/eventPhoto3.png")}
+                  style={styles.image}
+                />
               </View>
-              <Image
-                source={require("../assets/fashion/eventPhoto3.png")}
-                style={styles.image}
-              />
-            </View>
-            <View style={[styles.card1, styles.shadowProp]}>
-              <View>
-                <Text style={styles.title}>
-                  Kwanzaa Ball
-                </Text>
+              <View style={[styles.card1, styles.shadowProp]}>
+                <View>
+                  <Text style={styles.title}>
+                    Kwanzaa Ball
+                  </Text>
+                </View>
+                <Image
+                  source={require("../assets/fashion/eventPhoto4.png")}
+                  style={styles.image}
+                />
               </View>
-              <Image
-                source={require("../assets/fashion/eventPhoto4.png")}
-                style={styles.image}
-              />
-            </View>
-          </ScrollView>
+            </ScrollView>
+          </View>
         </View>
-      </View>
+        
+        <View style={styles.thirdheader}>
+          <View>
+            <Text>{'    '}</Text>
+            <Text style={styles.textheader}>Friends' Events</Text>
+            <ScrollView>
+              <View style={[styles.card2, styles.shadowProp]}>
+                <View style={styles.friendscontent}>
+                  <View>
+                    <TouchableOpacity style={[styles.usernamebutton, styles.shadow]} onPress={null}>
+                      <Ionicons name="person" size={20}/> 
+                      <Text style={styles.usernametext}>{'  '}MAY193</Text>
+                    </TouchableOpacity>
+                    <Text style={styles.title}>
+                      Halloween party
+                    </Text>
+                    <Text style={styles.caption}>
+                      racecar driver or queen...
+                    </Text>
+                  </View>
+                  <View>
+                    <Image
+                    source={require("../assets/fashion/eventPhoto6.png")}
+                    style={styles.friendsimage}
+                    />
+                  </View>
+                  <View>
+                    <Image
+                    source={require("../assets/fashion/eventPhoto7.png")}
+                    style={styles.friendsimage}
+                    />
+                  </View>
+                </View>
+              </View>
+              <View style={[styles.card2, styles.shadowProp]}>
+                <View style={styles.friendscontent}>
+                  <View>
+                    <TouchableOpacity style={[styles.usernamebutton, styles.shadow]} onPress={null}>
+                      <Ionicons name="person" size={20}/> 
+                      <Text style={styles.usernametext}>{'  '}FRANFRAN</Text>
+                    </TouchableOpacity>
+                    <Text style={styles.title}>
+                      Homecominggg
+                    </Text>
+                    <Text style={styles.caption}>
+                      Which shirt should I w...
+                    </Text>
+                  </View>
+                  <View>
+                    <Image
+                    source={require("../assets/fashion/eventPhoto8.png")}
+                    style={styles.friendsimage}
+                    />
+                  </View>
+                  <View>
+                    <Image
+                    source={require("../assets/fashion/eventPhoto9.png")}
+                    style={styles.friendsimage}
+                    />
+                  </View>
+                </View>
+              </View>
+            </ScrollView>
+          </View>
+        </View>
+      </ScrollView>
       
-      <View style={styles.thirdheader}>
-        <View>
-          <Text>{'    '}</Text>
-          <Text style={styles.textheader}>Friends' Events</Text>
-          <ScrollView>
-            <View style={[styles.card2, styles.shadowProp]}>
-              <View style={styles.friendscontent}>
-                <View>
-                  <TouchableOpacity style={[styles.usernamebutton, styles.shadow]} onPress={null}>
-                    <Ionicons name="person" size={20}/> 
-                    <Text style={styles.usernametext}>{'  '}MAY193</Text>
-                  </TouchableOpacity>
-                  <Text style={styles.title}>
-                    Halloween party
-                  </Text>
-                  <Text style={styles.caption}>
-                    racecar driver or queen...
-                  </Text>
-                </View>
-                <View>
-                  <Image
-                  source={require("../assets/fashion/eventPhoto6.png")}
-                  style={styles.friendsimage}
-                  />
-                </View>
-                <View>
-                  <Image
-                  source={require("../assets/fashion/eventPhoto7.png")}
-                  style={styles.friendsimage}
-                  />
-                </View>
-              </View>
-            </View>
-            <View style={[styles.card2, styles.shadowProp]}>
-              <View style={styles.friendscontent}>
-                <View>
-                  <TouchableOpacity style={[styles.usernamebutton, styles.shadow]} onPress={null}>
-                    <Ionicons name="person" size={20}/> 
-                    <Text style={styles.usernametext}>{'  '}FRANFRAN</Text>
-                  </TouchableOpacity>
-                  <Text style={styles.title}>
-                    Homecominggg
-                  </Text>
-                  <Text style={styles.caption}>
-                    Which shirt should I w...
-                  </Text>
-                </View>
-                <View>
-                  <Image
-                  source={require("../assets/fashion/eventPhoto8.png")}
-                  style={styles.friendsimage}
-                  />
-                </View>
-                <View>
-                  <Image
-                  source={require("../assets/fashion/eventPhoto9.png")}
-                  style={styles.friendsimage}
-                  />
-                </View>
-              </View>
-            </View>
-          </ScrollView>
-        </View>
-      </View>
 
     </View>
     
