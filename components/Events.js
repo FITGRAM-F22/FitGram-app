@@ -1,11 +1,9 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView, Dimensions } from 'react-native';
 import { FontAwesome5, Ionicons } from '@expo/vector-icons';
-import { faker } from '@faker-js/faker';
 
 export default function Events() {
   const { width } = Dimensions.get('window');
-  const image = { uri: 'https://reactnative.dev/img/tiny_logo.png' };
 
   return (
     <View style={styles.container}>
@@ -31,7 +29,7 @@ export default function Events() {
                 </Text>
               </View>
               <Image
-                source={image}
+                source={require("../assets/fashion/eventPhoto1.png")}
                 style={styles.image}
               />
             </View>
@@ -42,7 +40,7 @@ export default function Events() {
                 </Text>
               </View>
               <Image
-                source={image}
+                source={require("../assets/fashion/eventPhoto2.png")}
                 style={styles.image}
               />
             </View>
@@ -53,7 +51,7 @@ export default function Events() {
                 </Text>
               </View>
               <Image
-                source={image}
+                source={require("../assets/fashion/eventPhoto3.png")}
                 style={styles.image}
               />
             </View>
@@ -64,7 +62,7 @@ export default function Events() {
                 </Text>
               </View>
               <Image
-                source={image}
+                source={require("../assets/fashion/eventPhoto4.png")}
                 style={styles.image}
               />
             </View>
@@ -82,7 +80,7 @@ export default function Events() {
                 <View>
                   <TouchableOpacity style={[styles.usernamebutton, styles.shadow]} onPress={null}>
                     <Ionicons name="person" size={20}/> 
-                    <Text style={styles.usernametext}>{'  '}Username</Text>
+                    <Text style={styles.usernametext}>{'  '}MAY193</Text>
                   </TouchableOpacity>
                   <Text style={styles.title}>
                     Halloween party
@@ -93,13 +91,13 @@ export default function Events() {
                 </View>
                 <View>
                   <Image
-                  source={image}
+                  source={require("../assets/fashion/eventPhoto6.png")}
                   style={styles.friendsimage}
                   />
                 </View>
                 <View>
                   <Image
-                  source={image}
+                  source={require("../assets/fashion/eventPhoto7.png")}
                   style={styles.friendsimage}
                   />
                 </View>
@@ -110,7 +108,7 @@ export default function Events() {
                 <View>
                   <TouchableOpacity style={[styles.usernamebutton, styles.shadow]} onPress={null}>
                     <Ionicons name="person" size={20}/> 
-                    <Text style={styles.usernametext}>{'  '}Username</Text>
+                    <Text style={styles.usernametext}>{'  '}FRANFRAN</Text>
                   </TouchableOpacity>
                   <Text style={styles.title}>
                     Homecominggg
@@ -121,13 +119,13 @@ export default function Events() {
                 </View>
                 <View>
                   <Image
-                  source={image}
+                  source={require("../assets/fashion/eventPhoto8.png")}
                   style={styles.friendsimage}
                   />
                 </View>
                 <View>
                   <Image
-                  source={image}
+                  source={require("../assets/fashion/eventPhoto9.png")}
                   style={styles.friendsimage}
                   />
                 </View>
