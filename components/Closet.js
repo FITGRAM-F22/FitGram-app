@@ -28,40 +28,38 @@ export default function Closet() {
 
   return (
     <View style={styles.closet}>
-      <ScrollView style={styles.scrollview} keyboardShouldPersistTaps={'handled'}>
-        <View style={styles.firstheader}>
-          <TouchableOpacity style={[styles.usernamebutton, styles.shadow]} onPress={null}>
-            <Ionicons name="person" size={20}/> 
-            <Text style={styles.usernametext}>{'  '}MAGGIESWIFTIE</Text>
+      <View style={styles.firstheader}>
+        <TouchableOpacity style={[styles.usernamebutton, styles.shadow]} onPress={null}>
+          <Ionicons name="person" size={20}/> 
+          <Text style={styles.usernametext}>{'  '}MAGGIESWIFTIE</Text>
+        </TouchableOpacity>
+        <View style={styles.icons}>
+          <TouchableOpacity onPress={() => nav.navigate('Filters')}>
+            <Ionicons name="filter" size={32} color="black" /> 
           </TouchableOpacity>
-          <View style={styles.icons}>
-            <TouchableOpacity onPress={() => nav.navigate('Filters')}>
-              <Ionicons name="filter" size={32} color="black" /> 
-            </TouchableOpacity>
-            <Text>{'   '}</Text>
-            <TouchableOpacity onPress={() => setShowSettings(!showSettings)}>
-              <Ionicons name="settings-sharp" size={32} color="black" />
-            </TouchableOpacity>
-          </View>
-        </View>
-        <View style={styles.secondheader}>
-          <View style={styles.icons}>
-            <TouchableOpacity onPress={() => nav.navigate('CreatePost')}>
-              <Feather name="camera" size={32} color="black" />   
-            </TouchableOpacity>
-            <Text>{'    '}</Text>
-            <TouchableOpacity onPress={() => nav.navigate('CreateEvent')}>
-              <FontAwesome5 name="calendar-alt" size={32} color="black" />
-            </TouchableOpacity>
-          </View>
-          <TouchableOpacity style={[styles.streak, styles.shadow]} onPress={null}>
-            <MaterialIcons name="hourglass-bottom" size={20} color="black" />
-            <Text style={styles.usernametext}>{'  '}22 DAY STREAK</Text>
+          <Text>{'   '}</Text>
+          <TouchableOpacity onPress={() => setShowSettings(!showSettings)}>
+            <Ionicons name="settings-sharp" size={32} color="black" />
           </TouchableOpacity>
         </View>
-        <GridImageView data={photos} />
-        {showSettings && <Settings setShowSettings={setShowSettings}/>}
-      </ScrollView>
+      </View>
+      <View style={styles.secondheader}>
+        <View style={styles.icons}>
+          <TouchableOpacity onPress={() => nav.navigate('CreatePost')}>
+            <Feather name="camera" size={32} color="black" />   
+          </TouchableOpacity>
+          <Text>{'    '}</Text>
+          <TouchableOpacity onPress={() => nav.navigate('CreateEvent')}>
+            <FontAwesome5 name="calendar-alt" size={32} color="black" />
+          </TouchableOpacity>
+        </View>
+        <TouchableOpacity style={[styles.streak, styles.shadow]} onPress={null}>
+          <MaterialIcons name="hourglass-bottom" size={20} color="black" />
+          <Text style={styles.usernametext}>{'  '}22 DAY STREAK</Text>
+        </TouchableOpacity>
+      </View>
+      <GridImageView data={photos} />
+      {showSettings && <Settings setShowSettings={setShowSettings}/>}
     </View>
   );
 }
