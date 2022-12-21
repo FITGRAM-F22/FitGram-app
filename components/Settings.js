@@ -21,15 +21,15 @@ export default function Settings({setShowSettings}) {
         <Text style={styles.subheader}>Notifications</Text>
         <View style={styles.row}>
             <Text style={styles.regtext}>Daily Fit Check{'      '}</Text>
-            <Feather name="chevron-right" size={24} color="black" />
+            <Feather name="chevron-right" size={16} color="black" />
         </View>
         <View style={styles.row}>
             <Text style={styles.regtext}>Push Notifications{' '}</Text>
-            <Feather name="chevron-right" size={24} color="black" />
+            <Feather name="chevron-right" size={16} color="black" />
         </View>
         <View style={styles.row}>
             <Text style={styles.regtext}>Email{'                       '}</Text>
-            <Feather name="chevron-right" size={24} color="black" />
+            <Feather name="chevron-right" size={16} color="black" />
         </View>
         <Text style={styles.subheader}>Connected Accounts</Text>
         <View style={styles.row}>
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
         alignSelf: 'strech',
         width: 220,
         backgroundColor: '#FFF',
-        marginTop: -850,
+        marginTop: -60,
         marginRight: 40,
         paddingLeft: 16,
         paddingTop: 16,
@@ -81,25 +81,25 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.8,
         shadowRadius: 2,
         shadowOffset: {
-        height: 1,
-        width: 1
+            height: 1,
+            width: 1
         }
     },
     header: {
-        fontSize: 20,
+        fontSize: 16,
         fontWeight: 'bold'
     },
     subheader: {
-        fontSize: 16,
+        fontSize: 12,
         fontWeight: 'bold',
-        marginTop: 16,
+        marginTop: 10,
     },
     regtext: {
-        fontSize: 16,
+        fontSize: 12,
     },
     row: {
         flexDirection: 'row',
-        marginTop: 16,
+        marginTop: 10,
         marginLeft: 10,
         alignItems: 'center',
     },
@@ -121,16 +121,16 @@ const styles = StyleSheet.create({
     },
     button: {
         alignItems: 'center',
-        paddingTop: 12,
-        paddingLeft: 15,
-        paddingRight: 15,
-        paddingBottom: 12,
+        paddingTop: 8,
+        paddingLeft: 12,
+        paddingRight: 12,
+        paddingBottom: 8,
         borderRadius: 10,
-        marginTop: 24,
-        marginBottom: 12,
+        marginTop: 10,
+        marginBottom: 10,
     },
     btntext: {
-        fontSize: 15,
+        fontSize: 12,
         fontWeight: '600'
     },
     cancelbtn: {

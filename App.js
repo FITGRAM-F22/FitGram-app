@@ -39,7 +39,12 @@ export default function App() {
         })}>
         </Stack.Screen>
         <Stack.Screen name="Filters" component={Filters} options={{ headerShown: false }}></Stack.Screen>
-        <Stack.Screen name="CreateEvent" component={CreateEvent} options={{ headerShown: true }}></Stack.Screen>
+        <Stack.Screen name="CreateEvent" component={CreateEvent} options={({navigation}) => ({ 
+          title: "Create Event", 
+          headerShown: true, 
+          headerLeft: () => <Button title="  Cancel" onPress={() => navigation.navigate("Tab")}/>,
+          headerRight: () => <Button title="Save " onPress={() => navigation.navigate("Tab")}/>
+        })}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
   );
