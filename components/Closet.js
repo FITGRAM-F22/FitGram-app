@@ -3,12 +3,26 @@ import { StyleSheet, Text, View, TouchableOpacity, ScrollView } from 'react-nati
 import { Ionicons, Feather, FontAwesome5, MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons'; 
 import GridImageView from 'react-native-grid-image-viewer';
 import { useNavigation } from '@react-navigation/native';
-import { faker } from '@faker-js/faker';
+import {Asset} from 'expo-asset';
 import Settings from './Settings';
 
 export default function Closet() {
   const nav = useNavigation();
-  const photos = [faker.image.fashion(640, 480, true), faker.image.fashion(640, 480, true), faker.image.fashion(640, 480, true), 'https://reactnative.dev/img/tiny_logo.png', 'https://reactnative.dev/img/tiny_logo.png', 'https://reactnative.dev/img/tiny_logo.png', 'https://reactnative.dev/img/tiny_logo.png', 'https://reactnative.dev/img/tiny_logo.png', 'https://reactnative.dev/img/tiny_logo.png', 'https://reactnative.dev/img/tiny_logo.png', 'https://reactnative.dev/img/tiny_logo.png', 'https://reactnative.dev/img/tiny_logo.png', 'https://reactnative.dev/img/tiny_logo.png', 'https://reactnative.dev/img/tiny_logo.png', 'https://reactnative.dev/img/tiny_logo.png', 'https://reactnative.dev/img/tiny_logo.png', 'https://reactnative.dev/img/tiny_logo.png', 'https://reactnative.dev/img/tiny_logo.png']
+
+  const photo1URI = Asset.fromModule(require('../assets/fashion/closetPhoto1.png')).uri;
+  const photo2URI = Asset.fromModule(require('../assets/fashion/closetPhoto2.png')).uri;
+  const photo3URI = Asset.fromModule(require('../assets/fashion/closetPhoto3.png')).uri;
+  const photo4URI = Asset.fromModule(require('../assets/fashion/closetPhoto4.png')).uri;
+  const photo5URI = Asset.fromModule(require('../assets/fashion/closetPhoto5.png')).uri;
+  const photo6URI = Asset.fromModule(require('../assets/fashion/closetPhoto6.png')).uri;
+  const photo7URI = Asset.fromModule(require('../assets/fashion/closetPhoto7.png')).uri;
+  const photo8URI = Asset.fromModule(require('../assets/fashion/closetPhoto8.png')).uri;
+  const photo9URI = Asset.fromModule(require('../assets/fashion/closetPhoto9.png')).uri;
+  const photo10URI = Asset.fromModule(require('../assets/fashion/closetPhoto10.png')).uri;
+  const photo11URI = Asset.fromModule(require('../assets/fashion/closetPhoto11.png')).uri;
+  const photo12URI = Asset.fromModule(require('../assets/fashion/closetPhoto12.png')).uri;
+
+  const photos = [photo1URI, photo2URI, photo3URI, photo4URI, photo5URI, photo6URI, photo7URI, photo8URI, photo9URI, photo10URI, photo11URI, photo12URI]
 
   const [showSettings, setShowSettings] = useState(false);
 
@@ -18,7 +32,7 @@ export default function Closet() {
         <View style={styles.firstheader}>
           <TouchableOpacity style={[styles.usernamebutton, styles.shadow]} onPress={null}>
             <Ionicons name="person" size={20}/> 
-            <Text style={styles.usernametext}>{'  '}Username</Text>
+            <Text style={styles.usernametext}>{'  '}MAGGIESWIFTIE</Text>
           </TouchableOpacity>
           <View style={styles.icons}>
             <TouchableOpacity onPress={() => nav.navigate('Filters')}>

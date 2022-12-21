@@ -1,26 +1,26 @@
 import React, {useState} from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image, Button, Touchable } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
 import { Ionicons, MaterialCommunityIcons, Foundation} from '@expo/vector-icons'; 
 
-export default function MyPost() {
+export default function MyPost({image, style, activity, description}) {
     const [showDescription, setShowDescription] = useState(false);
 
     return (
         <View style={styles.post}> 
-            <Image style={styles.image} source={{uri: 'https://reactnative.dev/img/tiny_logo.png',}}/>
+            <Image style={styles.image} source={image}/>
             <View style={styles.tags}>
                 <TouchableOpacity onPress={() => setShowDescription(!showDescription)}>
                     <View style={[styles.shadow, styles.tag]}>
                         <MaterialCommunityIcons name="briefcase-outline" size={14}/>
-                        <Text>{'  '}Style</Text>
+                        <Text style={styles.regtext}>{style}</Text>
                     </View>
                     <View style={[styles.shadow, styles.tag]}>
                         <Ionicons name="md-globe-outline" size={14}/>
-                        <Text>{'  '}Activity</Text>
+                        <Text style={styles.regtext}>{activity}</Text>
                     </View>
                     {showDescription && <View style={[styles.shadow, styles.descriptiontag]}>
                         <Foundation name="page" size={14} color="black" />
-                        <Text>{'   '}Description</Text>
+                        <Text style={styles.regtext}>{description}</Text>
                     </View>}
                 </TouchableOpacity>
             </View>
@@ -47,8 +47,8 @@ const styles = StyleSheet.create({
         }
     },
     image: {
-        width: 100,
-        height: 100,
+        width: 150,
+        height: 150,
         marginRight: 12,
     },
     tags: {
@@ -62,15 +62,20 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         flexDirection: 'row',
         alignItems: 'center',
-        width: 150,
+        width: 170,
+        alignSelf: 'flex-start',
     },
     descriptiontag: {
         paddingTop: 12,
         paddingBottom: 12,
         paddingLeft: 14,
+        paddingRight: 12,
         backgroundColor: '#fff',
         flexDirection: 'row',
-        width: 150,
-        height: 100,
+        alignItems: 'center',
+        width: 170,
+    },
+    regtext: {
+        marginLeft: 10,
     }
 });

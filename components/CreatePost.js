@@ -8,15 +8,15 @@ export default function CreatePost() {
     return (
         <View style={styles.createpostwithdescription}>
             <View style={styles.createpost}>
-                <Image style={styles.image} source={{uri: 'https://reactnative.dev/img/tiny_logo.png',}}/>
+                <Image style={styles.image} source={require("../assets/fashion/myPhoto.png")}/>
                 <View style={styles.filters}>
                     <Text style={styles.filterstext}>Filters</Text>
                     <View style={styles.row}>
-                        <Text>Daytime</Text>
+                        <Text>Nighttime</Text>
                         <Feather name="chevron-right" size={24} color="black" />
                     </View>
                     <View style={styles.row}>
-                        <Text>Moview</Text>
+                        <Text>Movie</Text>
                         <Feather name="chevron-right" size={24} color="black" />
                     </View>
                     <View style={styles.row}>

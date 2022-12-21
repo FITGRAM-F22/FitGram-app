@@ -1,32 +1,32 @@
 import React, {useState} from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image, Button } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
 import { Ionicons, MaterialCommunityIcons, Foundation} from '@expo/vector-icons'; 
 
-export default function FriendPost() {
+export default function FriendPost({image, username, style, activity, description}) {
   const [showDescription, setShowDescription] = useState(false);
 
   return (
     <View style={styles.post}>
       <View style={styles.centered}>
-        <Image style={styles.image} source={{uri: 'https://reactnative.dev/img/tiny_logo.png'}}/>
+        <Image style={styles.image} source={image}/>
         <TouchableOpacity style={[styles.usernamebutton, styles.shadow]} onPress={null}>
           <Ionicons name="person" size={20}/> 
-          <Text style={styles.usernametext}>{'  '}Username</Text>
+          <Text style={styles.usernametext}>{'  '}{username}</Text>
         </TouchableOpacity> 
         <TouchableOpacity style={styles.alltags} onPress={() => setShowDescription(!showDescription)}>
             <View style={styles.maintags}>
               <View style={[styles.shadow, styles.tag]}>
                 <MaterialCommunityIcons name="briefcase-outline" size={14}/>
-                <Text>{'  '}Style</Text>
+                <Text style={styles.regtext}>{style}</Text>
               </View>
               <View style={[styles.shadow, styles.tag]}>
                 <Ionicons name="md-globe-outline" size={14}/>
-                <Text>{'  '}Activity</Text>
+                <Text style={styles.regtext}>{activity}</Text>
               </View>
             </View>
-            {showDescription && <View style={[styles.shadow, styles.commenttag]}>
+            {showDescription && <View style={[styles.shadow, styles.descriptiontag]}>
                 <Foundation name="page" size={14} color="black" />
-                <Text>{'  '}Description</Text>
+                <Text style={styles.regtext}>{description}</Text>
             </View>}
         </TouchableOpacity>
       </View>
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     height: 250,
   },
   alltags: {
-    marginTop: 200,
+    marginTop: 225,
     marginBottom: 30,
   },
   maintags: {
@@ -85,21 +85,28 @@ const styles = StyleSheet.create({
   tag: {
     paddingTop: 12,
     paddingBottom: 12,
-    justifyContent: 'center',
+    paddingLeft: 12,
+    paddingRight: 12,
     marginTop: 4,
     backgroundColor: '#fff',
     flexDirection: 'row',
     alignItems: 'center',
     width: 150,
+    alignSelf: 'flex-start',
   },
-  commenttag: {
+  descriptiontag: {
     paddingTop: 12,
     paddingBottom: 12,
-    justifyContent: 'center',
+    paddingLeft: 14,
+    paddingRight: 12,
     marginBottom: 4,
     backgroundColor: '#fff',
     flexDirection: 'row',
     alignItems: 'center',
+    alignSelf: 'flex-start',
     width: 300,
+  },
+  regtext: {
+    marginLeft: 10,
   }
 });
