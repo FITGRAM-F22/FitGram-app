@@ -1,9 +1,9 @@
 
 import * as React from 'react';
-import { Text, View, StyleSheet, Button } from 'react-native';
+import { Button, TouchableOpacity } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { MaterialCommunityIcons, SimpleLineIcons, MaterialIcons, Feather } from '@expo/vector-icons';
+import { Feather } from '@expo/vector-icons'; 
 
 // You can import from local files
 import Login from './components/Login';
@@ -29,9 +29,15 @@ export default function App() {
           headerShown: true, 
           headerLeft: () => <Button title="  Cancel" onPress={() => navigation.navigate("Tab")}/>,
           headerRight: () => <Button title="Save " onPress={() => navigation.navigate("Tab")}/>
+        })}></Stack.Screen>
+        <Stack.Screen name="Friends" component={Friends} options={({navigation}) => ({ 
+          title: "Add Friends", 
+          headerShown: true, 
+          headerLeft: () => 
+          <TouchableOpacity style={{marginLeft: 16}} onPress={() => navigation.navigate("Tab")}>
+            <Feather name="arrow-left" size={28} color="black" /></TouchableOpacity>,
         })}>
         </Stack.Screen>
-        <Stack.Screen name="Friends" component={Friends} options={{ headerShown: true }}></Stack.Screen>
         <Stack.Screen name="Filters" component={Filters} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="CreateEvent" component={CreateEvent} options={{ headerShown: true }}></Stack.Screen>
       </Stack.Navigator>
